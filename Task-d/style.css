@@ -40,6 +40,8 @@ p {
   font-size: 1em;
   color: #1f2933;
   margin-bottom: 1em;
+  border-left: cadetblue;
+  
 }
 
 .div1, .div2 {

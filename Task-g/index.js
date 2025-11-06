@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registrationForm");
   const table = document.getElementById("contestantTable").querySelector("tbody");
 
-  const firstNameInput = document.getElementById("firstName");
-  const lastNameInput = document.getElementById("lastName");
-  const birthDate = document.getElementById("dateOfBirth");
+  const firstName = document.getElementById("firstName");
+  const lastName = document.getElementById("lastName");
+  const birthDate = document.getElementById("birthDate");
   const eMail = document.getElementById("eMail");
   const telNumber = document.getElementById("telNumber");
   const races = document.querySelectorAll('input[name="race"]');
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     //remove custom errors
-    [firstNameInput, lastNameInput, birthDate, eMail, telNumber].forEach((input) =>
+    [firstName, lastName, birthDate, eMail, telNumber].forEach((input) =>
       input.setCustomValidity("")
     );
 
@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
       firstName.setCustomValidity("Too long or short, no special characters allowed.");
       valid = false;
     }
-    if (!nameRegex.test(lastNameInput.value.trim())) {
-      lastNameInput.setCustomValidity("Too long or short, no special characters allowed.");
+    if (!nameRegex.test(lastName.value.trim())) {
+      lastName.setCustomValidity("Too long or short, no special characters allowed.");
       valid = false;
     }
 
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const row = document.createElement("tr");
 
     const nameCell = document.createElement("td");
-    nameCell.textContent = `${firstNameInput.value} ${lastNameInput.value}`;
+    nameCell.textContent = `${firstName.value} ${lastName.value}`;
     row.appendChild(nameCell);
 
     raceOrder.forEach(race => {
@@ -125,6 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //reset form
     form.reset();
-    firstNameInput.focus();
+    firstName.focus();
   });
 });

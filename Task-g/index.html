@@ -29,48 +29,50 @@
 
         <form id="registrationForm" novalidate>
           <section>
-          <div class="form-row">
-            <label for="firstName">First name</label>
-            <input id="firstName" name="firstName" type="text" required placeholder="First name (2-15 letters)"
-            minlength="2" maxlength="15"  pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$">
-          </div>
+            <div class="form-row">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" required placeholder="First name (2-15 letters)"
+                minlength="2" maxlength="15" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$">
+            </div>
 
-          <div class="form-row">
-            <label for="lastName">Last name</label>
-            <input id="lastName" name="lastName" type="text" required placeholder="Last name (2-15 letters)"
-            minlength="2" maxlength="15"  pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$">
-          </div>    
+            <div class="form-row">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" type="text" required placeholder="Last name (2-15 letters)"
+                minlength="2" maxlength="15" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$">
+            </div>
 
-          <div class="form-row">
-            <label for="dateOfBirth">Birth date</label>
-            <input id="birthDate" name="birthDate" type="date" required placeholder="Ages accepted: 18-60">
-          </div>          
+            <div class="form-row">
+              <label for="dateOfBirth">Birth date</label>
+              <input id="dateOfBirth" name="birthDate" type="date" required placeholder="Ages accepted: 18-60">
+            </div>
 
-          <div class="form-row">
-            <label for="eMail">Email</label>
-            <input id="eMail" name="eMail" type="email" required placeholder="name@example.com">
-          </div>  
+            <div class="form-row">
+              <label for="eMail">Email</label>
+              <input id="eMail" name="eMail" type="email" required placeholder="name@example.com">
+            </div>
 
-          <div class="form-row">
-            <label for="telNumber">Phone number</label>
-            <input id="telNumber" name="telNumber" type="tel" required placeholder="E.g. +358 ... ... ">
-          </div>  
+            <div class="form-row">
+              <label for="telNumber">Phone number</label>
+              <input id="telNumber" name="telNumber" type="tel" required placeholder="E.g. +358 ... ... ">
+            </div>
 
-        <fieldset class="which-race">
-            <legend>Which race(s) are you signing up for?</legend>
-            <label><input type="checkbox" name="race" value="5K"> 5 km</label>
-            <label><input type="checkbox" name="race" value="10K"> 10 km</label>
-          </fieldset>
-          
-          <div class="form-row">
-            <label for="terms">I agree to the terms and conditions</label>
-            <input id="terms" name="terms" type="checkbox">
-          </div>
+            <fieldset class="which-race">
+              <legend>Which race(s) are you signing up for?</legend>
+              <label><input type="checkbox" name="race" value="5K"> 5 km</label>
+              <label><input type="checkbox" name="race" value="10K"> 10 km</label>
+            </fieldset>
 
-          <div class="form-row">
-            <button id="addRowBtn" type="submit" class="btn">Sign up</button>
-            <button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
-          </div>
+            <div class="form-row">
+              <label for="terms">I agree to the terms and conditions</label>
+              <input id="terms" name="terms" type="checkbox">
+            </div>
+
+            <div class="form-row">
+              <button id="addRowBtn" type="submit" class="btn">Sign up</button>
+              <button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
+            </div>
+
+            <input type="hidden" id="timestamp" name="timestamp">
         </form>
       </section>
     </div>
@@ -90,7 +92,7 @@
       </table>
     </div>
   </main>
-
+  
 </body>
 
 </html>

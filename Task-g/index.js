@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const CROSS = '❌';
   const raceOrder = ["5K", "10K"];
 
+
   const form = document.getElementById("registrationForm");
   const table = document.getElementById("contestantTable").querySelector("tbody");
 
   const firstNameInput = document.getElementById("firstName");
   const lastNameInput = document.getElementById("lastName");
-  const birthDate = document.getElementById("birthDate");
+  const birthDate = document.getElementById("dateOfBirth");
   const eMail = document.getElementById("eMail");
   const telNumber = document.getElementById("telNumber");
   const races = document.querySelectorAll('input[name="race"]');
@@ -26,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     [firstNameInput, lastNameInput, birthDate, eMail, telNumber].forEach((input) =>
       input.setCustomValidity("")
     );
+
+    const timestamp = document.getElementById("timestamp");
+    timestamp.value = new Date();
 
     let valid = true;
 
@@ -66,21 +70,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (eMail.value.trim() === "") {
       eMail.setCustomValidity("Please enter your email address.");
       valid = false;
-    } 
+    }
     else if (!eMail.value.includes("@")) {
       eMail.setCustomValidity("Please enter a valid email address.");
       valid = false;
     }
 
-    const numberRegex = /^\+358\d{8,12}$/;
+    const numberRegex = /^\+358\d{4,10}$/;
 
     if (telNumber.value.trim() === "") {
       telNumber.setCustomValidity("Please enter your phone number.");
       valid = false;
     }
-    else if (!numberRegex.test(telNumber.value)){
+    else if (!numberRegex.test(telNumber.value)) {
       telNumber.setCustomValidity("Please enter number in the format +358 xxx xxx...")
-      valid = false; 
+      valid = false;
     }
 
     const raceSelected = Array.from(races).some(r => r.checked);

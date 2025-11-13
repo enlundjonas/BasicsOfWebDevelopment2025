@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Race Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!--
+    Author: Jonas Enlund
+    Date: 2025-11-12
+  -->
+
+  <header class="pt-8 pb-4 bg-blue-950 text-white">
+    <h1 class="font-bold text-xl mb-2 text-center">Race Sign Up Form</h1>
+  </header>
+
+  <main class="pt-5 max-w-full mx-auto">
+    <div class="mb-4">
+
+      <section>
+        <h2 class="text-xl font-bold text-center py-2">Your information</h2>
+        <!--Form using tailwind css-->
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 max-w-xl mx-auto" id="registrationForm" action="#"
+          method="post" novalidate>
+          <section>
+            <div class="flex gap-2 items-center mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">First name</label>
+              <input
+                class="shadow appearance-none border rounded w-full flex-1 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="firstName" type="text" required placeholder="First name (2-15 letters)" minlength="2" maxlength="15"
+                pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$" aria-describedby="firstNameError" data-error-target="firstNameError">
+            </div>
+            <p id="firstNameError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+
+            <div class="flex gap-2 items-center mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">Last name</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 flex-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="lastName" type="text" required placeholder="Last name (2-15 letters)" minlength="2" maxlength="15"
+                pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$" aria-describedby="lastNameError" data-error-target="lastNameError">
+            </div>
+            <p id="lastNameError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+
+            <div class="flex gap-2 items-center mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="birthDate">Birth date</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 flex-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="birthDate" type="date" required
+                aria-describedby="birthDateError" data-error-target="birthDateError">
+            </div>
+            <p id="birthDateError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+
+            <div class="flex gap-2 items-center mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2 flex-1" for="eMail">Email</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="eMail" name="eMail" type="email" required placeholder="name@example.com" aria-describedby="eMailError" data-error-target="eMailError">
+            </div>
+            <p id="eMailError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+
+            <div class="flex gap-2 items-center mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="telNumber">Phone number</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 flex-1 leading-tight focus:outline-none focus:shadow-outline"
+                id="telNumber" name="telNumber" type="tel" required placeholder="E.g. +358 ... ... "
+                aria-describedby="telNumberError" data-error-target="telNumberError">
+            </div>
+            <p id="telNumberError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+
+            <div class="border border-dashed rounded-md items-center p-3">
+              <p class="block text-gray-700 text-sm font-bold my-1">Which race(s) are you signing up for?</p>
+              <div class="flex items-center gap-8">
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="race" value="5K">
+                  <span>5 km</span>
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="race" value="10K">
+                  <span>10 km</span>
+                </label>
+              </div>
+              <p id="raceError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+            </div>
+
+            <div class="block text-gray-700 text-sm font-bold mb-2 py-5">
+              <input type="checkbox" id="terms">
+              <span>I agree to the terms and conditions</span>
+            </div>
+            <p id="termsError" class="mt-1 text-sm text-red-600 hidden" aria-live="polite"></p>
+            <div class="flex gap-3 mt-1">
+              <button type="submit" class="px-4 py-2 border border-border rounded-md bg-white hover:bg-slate-100">
+                Sign up
+              </button>
+              <button type="reset" class="px-4 py-2 border border-border rounded-md bg-white hover:bg-slate-100">
+                Clear
+              </button>
+            </div>
+            <input type="hidden" id="timestamp" name="timestamp">
+          </section>
+          </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="max-w-4xl mx-auto border border-gray-300 px-4 mx-3 py-2 text-left font-semibold bg-white">
+      <table id=contestantTable
+        class="table-fixed min-w-full border-collapse bg-blue-900 transparent border border-gray-300">
+        <thead class="bg-blue-950 text-white">
+          <tr>
+            <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Contestant name</th>
+            <th class="border border-gray-300 px-4 py-2 text-center items-center">5K</th>
+            <th class="border border-gray-300 px-4 py-2 text-center">10K</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>

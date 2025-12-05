@@ -17,15 +17,14 @@
                 <a href="home.html" class="hover:text-green-500">Home</a>
                 <a href="catalog.html" class="hover:text-green-500">Catalog</a>
                 <a href="index.html" class="border-b-2 border-green-500 hover:text-green-500">My orders</a>
-                <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Book now</button>
             </nav>
         </div>
     </header>
 
     <!-- Hero background -->
-    <section class="relative sm:h-96 h-64 md:h-[550px] bg-cover bg-bottom"
+    <div class="relative sm:h-96 h-64 md:h-[550px] bg-cover bg-bottom"
         style="background-image: url('images/7732616_5243.svg');">
-    </section>
+    </div>
 
 
     <!-- Order confirmation & form -->
@@ -59,10 +58,10 @@
                             class="w-full md:w-64 border border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     </label>
 
-                    <section>
-                        <label for="rentalPeriod" class="text-sm font-medium text-gray-700">
+                    <div>
+                        <span class="text-sm font-medium text-gray-700">
                             Pick your rental dates:
-                        </label>
+                        </span>
 
                         <div class="mt-2 flex flex-col sm:flex-row sm:gap-4">
                             <div class="flex flex-col">
@@ -76,7 +75,7 @@
                                     class="border border-gray-300 rounded px-3 py-2 text-sm">
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
 
 
@@ -92,7 +91,7 @@
                     <div class="flex flex-col space-y-1">
                         <input id="first-name" type="text" name="first-name" required autocomplete="given-name" class="border border-gray-300 rounded px-3 py-2 text-sm
                     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Enter your first name" />
+                            placeholder="Enter your first name">
                     </div>
 
                     <!-- Last name -->
@@ -102,7 +101,7 @@
                     <div class="flex flex-col space-y-1">
                         <input id="last-name" type="text" name="last-name" required autocomplete="family-name"
                             class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Enter your last name" />
+                            placeholder="Enter your last name">
                     </div>
 
                     <!-- Email -->
@@ -112,7 +111,7 @@
                     <div class="flex flex-col space-y-1">
                         <input id="email" name="email" type="email" required
                             class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="email.address@example.com" />
+                            placeholder="email.address@example.com">
                     </div>
 
                     <!-- Phonenumber -->
@@ -134,13 +133,13 @@
 
                         <div class="flex items-center space-x-2">
                             <input id="basic" name="plan" type="radio" value="yes"
-                                class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" required />
+                                class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" required>
                             <label for="basic" class="text-sm text-gray-700">Yes</label>
                         </div>
 
                         <div class="flex items-center space-x-2">
                             <input id="pro" name="plan" type="radio" value="no"
-                                class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" />
+                                class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500">
                             <label for="pro" class="text-sm text-gray-700">No</label>
                         </div>
                     </fieldset>
@@ -148,26 +147,26 @@
                     <!--Terms & Conditions-->
                     <div class="flex items-center space-x-2 mt-4">
                         <input id="acceptTerms" name="acceptTerms" type="checkbox" required
-                            class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" />
+                            class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500">
                         <label for="acceptTerms" class="text-sm text-gray-700">
-                            I accept the <a href="rental-terms.html" class="text-blue-600 underline">rental terms</a> and <a href="privacy.html"
-                                class="text-blue-600 underline">privacy policy</a>
+                            I accept the <a href="rental-terms.html" class="text-blue-600 underline">rental terms</a>
+                            and <a href="privacy.html" class="text-blue-600 underline">privacy policy</a>
                         </label>
                     </div>
 
                     <!--News letter-->
                     <div class="flex items-center space-x-2 mt-4">
                         <input id="subscribeNewsletter" name="subscribeNewsletter" type="checkbox"
-                            class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" />
+                            class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500">
                         <label for="subscribeNewsletter" class="text-sm text-gray-700">
                             Subscribe to our newsletter
                         </label>
                     </div>
 
                     <!-- Free text area -->
-                    <label for="freeText" class="text-sm font-medium text-gray-700">
+                    <span class="text-sm font-medium text-gray-700">
                         Additional notes/wishes
-                    </label>
+                    </span>
 
                     <textarea id="message" name="message" rows="4"
                         class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -179,9 +178,10 @@
                             Submit rental request
                         </button>
                     </div>
+                </div>
+            </div>
+        </section>
     </form>
-    </div>
-    </section>
 
 
 

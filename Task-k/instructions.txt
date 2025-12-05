@@ -19,7 +19,7 @@ The order form must be built using semantic HTML (<form>, <label>, etc.) and inc
 3. Additional info & consent
 -Free text area (type textarea) for message / special wishes. ✅
 -Checkbox to accept terms and conditions (e.g., “I accept the rental terms and privacy policy”). ✅
--Optional: Another checkbox such as “Subscribe to newsletter”.
+-Optional: Another checkbox such as “Subscribe to newsletter”.✅
 
 
 4.Submit 

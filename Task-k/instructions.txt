@@ -28,7 +28,7 @@ The order form must be built using semantic HTML (<form>, <label>, etc.) and inc
 
     You are not required to implement a backend.
     The form can:
-    Either send data to a dummy URL (e.g. action="thanks.html"), or ✅ (not working yet)
+    Either send data to a dummy URL (e.g. action="thanks.html"), or ✅
     Be used just for HTML/JS validation practice without real submission.
 
 

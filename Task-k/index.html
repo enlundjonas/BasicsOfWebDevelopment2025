@@ -31,16 +31,40 @@
     <!-- Order confirmation & form -->
     <section class="max-w-5xl mx-auto px-6 py-12 text-center">
         <h1 class="text-4xl font-bold">Order confirmation</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <!--Left column (product info/summary)-->
-            <div class="flex flex-col">
-                <p>Enter product image and information here unless it's too complicated. Maybe a drop down menu?</p>
-                <p>on further inspection a drop down menu is apparently required</p>
+
+            <div class="flex flex-col border border-r-black items-start space-y-4 p-4 bg-gray-100">
+                <label for="product" class="text-sm font-medium text-gray-700">Choose a product</label>
+
+                <select id="product" name="product" class="w-full md:w-64 border border-gray-300 rounded px-3 py-2 text-sm
+                    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">-- Select a product --</option>
+                    <option value="city-bike">VTT standard - 20€ / day</option>
+                    <option value="mountain-bike">VTT with baby seat - 24€ / day</option>
+                    <option value="electric-scooter">BMX bike - 22€ / day</option>
+                    <option value="e-bike">Neomouv e-bike - 38€ / day</option>
+                    <option value="foldable e-bike">Ness Icon foldable e-bike - 34€ / day</option>
+                    <option value="electric fatbike">Sduro Fatsix electric fatbike - 48€ / day</option>
+                    <option value="vespa">Vespa scooter - 55€ / day</option>
+                    <option value="motorcycle">Moto Guzzi motorcycle - 75€ / day</option>
+                    <option value="dirt bike">KTM 300 XC dirt bike - 85€ / day</option>
+                </select>
+
+                <section>
+                    <label for="rentalPeriod" class="text-sm font-medium text-gray-700">Pick your rental dates:</label>
+                    <p class="mt-4 flex">Start date</p>
+                    <input id="startDate" class="border border-gray-300 rounded px-3 py-2 text-sm" type="date">
+                    <p class="mt-4 flex">End date</p>
+                    <input id="endDate" class="border border-gray-300 rounded px-3 py-2 text-sm" type="date">
+                </section>
             </div>
 
+
             <!-- Right column (form) -->
-            <form>
+            <form action="thanks.html" method="POST">
                 <h2 class="text-2xl font-semibold mb-4">Enter your information</h2>
 
                 <!-- First name -->
@@ -50,7 +74,7 @@
                 <div class="flex flex-col space-y-1">
                     <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="border border-gray-300 rounded px-3 py-2 text-sm
                     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Enter your first name" />
+                        placeholder="Enter your first name"/>
                 </div>
 
                 <!-- Last name -->
@@ -60,7 +84,7 @@
                 <div class="flex flex-col space-y-1">
                     <input id="last-name" type="text" name="last-name" autocomplete="family-name"
                         class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Enter your last name" />
+                        placeholder="Enter your last name"/>
                 </div>
 
                 <!-- Email -->
@@ -70,7 +94,7 @@
                 <div class="flex flex-col space-y-1">
                     <input id="email" name="email" type="email" required
                         class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="email.address@example.com" />
+                        placeholder="email.address@example.com"/>
                 </div>
 
                 <!-- Phonenumber -->
@@ -108,13 +132,21 @@
                     Additional notes/wishes
                 </label>
 
-                <textarea id="message" name="message" rows="4" 
-                class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="E.g. Please add the coolest looking helmet you got"></textarea>
+                <textarea id="message" name="message" rows="4"
+                    class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="E.g. Please add the coolest looking helmet you got"></textarea>
 
+
+                <div class="text-center py-9">
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                        Submit rental request
+                    </button>
+                </div>
             </form>
         </div>
     </section>
+
+
 
     <footer class="bg-green-900 text-white text-center p-3 text-sm">
         © 2025 RideFlow Rentals. All rights reserved.

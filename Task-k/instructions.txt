@@ -1,34 +1,34 @@
 2️⃣ Form Structure & Fields
 The order form must be built using semantic HTML (<form>, <label>, etc.) and include at least the following fields:
 
-1. Customer information
--Full name (text)
--Email address (type email)
--Phone number (type tel)
+1. Customer information ✅
+-Full name (text)  ✅
+-Email address (type email) ✅
+-Phone number (type tel) ✅
 
 
 2. Rental details (the following are examples)
--Item to rent:
-    -A <select> dropdown with options that match your catalog items (same or similar names).
+-Item to rent: ✅
+    -A <select> dropdown with options that match your catalog items (same or similar names). ✅
 -Rental period:
-    -Start date (type date)
-    -End date (type date) or number of days (type number)
+    -Start date (type date) ✅
+    -End date (type date) or number of days (type number) ✅
 -Quantity (type number, with sensible min and maybe max)
 
 
 3. Additional info & consent
--Free text area (type textarea) for message / special wishes.
+-Free text area (type textarea) for message / special wishes. ✅
 -Checkbox to accept terms and conditions (e.g., “I accept the rental terms and privacy policy”).
 -Optional: Another checkbox such as “Subscribe to newsletter”.
 
 
-4.Submit
--A clear submit button, e.g., “Send order request” or “Submit rental request”.
+4.Submit 
+-A clear submit button, e.g., “Send order request” or “Submit rental request”.✅
 
 
     You are not required to implement a backend.
     The form can:
-    Either send data to a dummy URL (e.g. action="thanks.html"), or
+    Either send data to a dummy URL (e.g. action="thanks.html"), or ✅ (not working yet)
     Be used just for HTML/JS validation practice without real submission.
 
 

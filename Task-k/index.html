@@ -16,7 +16,7 @@
             <nav class="flex gap-6 items-center justify-end w-full md:w-auto">
                 <a href="home.html" class="hover:text-green-500">Home</a>
                 <a href="catalog.html" class="hover:text-green-500">Catalog</a>
-                <a href="#" class="border-b-2 border-green-500 hover:text-green-500">My orders</a>
+                <a href="index.html" class="border-b-2 border-green-500 hover:text-green-500">My orders</a>
                 <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Book now</button>
             </nav>
         </div>
@@ -90,7 +90,7 @@
                         First name
                     </label>
                     <div class="flex flex-col space-y-1">
-                        <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="border border-gray-300 rounded px-3 py-2 text-sm
+                        <input id="first-name" type="text" name="first-name" required autocomplete="given-name" class="border border-gray-300 rounded px-3 py-2 text-sm
                     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Enter your first name" />
                     </div>
@@ -100,7 +100,7 @@
                         Last name
                     </label>
                     <div class="flex flex-col space-y-1">
-                        <input id="last-name" type="text" name="last-name" autocomplete="family-name"
+                        <input id="last-name" type="text" name="last-name" required autocomplete="family-name"
                             class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Enter your last name" />
                     </div>
@@ -144,6 +144,25 @@
                             <label for="pro" class="text-sm text-gray-700">No</label>
                         </div>
                     </fieldset>
+
+                    <!--Terms & Conditions-->
+                    <div class="flex items-center space-x-2 mt-4">
+                        <input id="acceptTerms" name="acceptTerms" type="checkbox" required
+                            class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" />
+                        <label for="acceptTerms" class="text-sm text-gray-700">
+                            I accept the <a href="#" class="text-blue-600 underline">rental terms</a> and <a href="#"
+                                class="text-blue-600 underline">privacy policy</a>
+                        </label>
+                    </div>
+
+                    <!--News letter-->
+                    <div class="flex items-center space-x-2 mt-4">
+                        <input id="subscribeNewsletter" name="subscribeNewsletter" type="checkbox"
+                            class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" />
+                        <label for="subscribeNewsletter" class="text-sm text-gray-700">
+                            Subscribe to our newsletter
+                        </label>
+                    </div>
 
                     <!-- Free text area -->
                     <label for="freeText" class="text-sm font-medium text-gray-700">

@@ -67,12 +67,12 @@
                         <div class="mt-2 flex flex-col sm:flex-row sm:gap-4">
                             <div class="flex flex-col">
                                 <span class="text-sm">Start date</span>
-                                <input id="startDate" required type="date"
+                                <input id="startDate" required type="date" min="2025-12-05"
                                     class="border border-gray-300 rounded px-3 py-2 text-sm">
                             </div>
                             <div class="flex flex-col mt-2 sm:mt-0">
                                 <span class="text-sm">End date</span>
-                                <input id="endDate" required type="date"
+                                <input id="endDate" required type="date" min="2025-12-05"
                                     class="border border-gray-300 rounded px-3 py-2 text-sm">
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                         <input id="acceptTerms" name="acceptTerms" type="checkbox" required
                             class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500" />
                         <label for="acceptTerms" class="text-sm text-gray-700">
-                            I accept the <a href="#" class="text-blue-600 underline">rental terms</a> and <a href="#"
+                            I accept the <a href="rental-terms.html" class="text-blue-600 underline">rental terms</a> and <a href="privacy.html"
                                 class="text-blue-600 underline">privacy policy</a>
                         </label>
                     </div>

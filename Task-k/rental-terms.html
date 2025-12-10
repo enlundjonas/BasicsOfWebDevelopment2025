@@ -8,7 +8,7 @@
     <title>RideFlow Rentals</title>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
 
     <header class="bg-white shadow-sm">
         <div class="container mx-auto flex justify-between items-center p-4">
@@ -21,28 +21,14 @@
         </div>
     </header>
 
-    <!-- Hero background -->
-    <div class="relative h-[350px] md:h-[550px] bg-cover bg-bottom"
-        style="background-image: url('images/7732616_5243.svg');">
-    </div>
-
-    <section class="max-w-xl mx-auto px-6 py-24 text-center">
-        <!-- Confirmation message -->
-        <h1 class="text-4xl font-bold mb-4">Thank you for your order!</h1>
-        <p class="text-gray-700 mb-8">
-            Your order has been saved successfully. Please check your email for any updates.
-        </p>
-
-        <!-- Buttons -->
-        <div class="flex justify-center gap-4">
-            <a href="home.html" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">
-                Return to Home
-            </a>
-            <a href="index.html" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-                Make another booking
-            </a>
-        </div>
-    </section>
+    <main class="flex-grow max-w-3xl mx-auto p-6">
+        <h2 class="text-2xl font-bold mb-4">Rental Terms</h2>
+        <p class="mb-2">1. All rentals must be returned in the same condition.</p>
+        <p class="mb-2">2. Customers are responsible for any damages during the rental period.</p>
+        <p class="mb-2">3. Rental duration is counted in full days, starting at pickup time.</p>
+        <p class="mb-2">4. Cancellation policy: Free cancellation up to 24 hours before pickup.</p>
+        <p class="mb-2">5. By using our services, you agree to comply with local traffic laws.</p>
+    </main>
 
     <footer class="bg-green-900 text-white text-center p-3 text-sm">
         © 2025 RideFlow Rentals. All rights reserved.

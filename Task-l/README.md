@@ -3,5 +3,5 @@
 <ul>
   <li>Double checked and made sure all links work as intended</li>
   <li>Fixed responsiveness on all screen sizes</li> 
-  <li>-Fixed W3C validation issues</li>
+  <li>Fixed W3C validation issues</li>
 </ul>
